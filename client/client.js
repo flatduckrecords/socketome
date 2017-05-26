@@ -1,9 +1,6 @@
 var exampleSocket = new WebSocket("wss://robertmorrison.me:8080");
 var i = document.getElementById("chatbox");
-//var f = i.contentDocument;
-//var w = i.contentWindow;
-var v = document.querySelector("#talkbox").message;
-//f.write('<link rel="stylesheet" type="text/css" href="chat.css">');
+var v = document.getElementById("talkbox").message;
 
 document.querySelector("#talkbox").addEventListener("submit", function(e){
 	e.preventDefault();
@@ -14,7 +11,6 @@ document.querySelector("#talkbox").addEventListener("submit", function(e){
 console.log('Client start');
 
 exampleSocket.onmessage = function (event) {
-	
 	var text = "";
 	var msg = JSON.parse(event.data);
 	var time = new Date(msg.date);
@@ -25,9 +21,7 @@ exampleSocket.onmessage = function (event) {
 	console.log(event.data, timeStr);
 }
 
-exampleSocket.onerror = function (event) {
-	alert('error!');
-}
+exampleSocket.onerror = function (event) { }
 
 window.onbeforeunload = function() {
 	exampleSocket.close();
@@ -44,7 +38,6 @@ function messageWrite(message, cssclass, id) {
 	msg.setAttribute('class', cssclass);
 	i.appendChild(msg);
 	i.scrollTop = i.scrollHeight;
-  
 }
 
 function open(){
