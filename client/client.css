@@ -1,0 +1,77 @@
+div.me {
+	text-align: right;
+}
+.me blockquote,
+.notme blockquote {
+	background: #5997fa;
+	color: white;
+	padding: 1em;
+	border-radius: 3px;
+	text-align: right;
+	margin: 1em 1em 3em;
+}
+.notme blockquote {
+	background: #e8e8e8;
+	color: #333;
+	text-align: left;
+}
+
+blockquote {
+	position: relative;
+	display: inline-block;
+  font-family: "Avenir Next", Avenir, sans-serif;
+}
+
+blockquote cite {
+		position: absolute;
+		bottom: -1.6em;
+		color: #999;
+		white-space: nowrap;
+		font-size: 0.8rem;
+}
+.me blockquote cite {
+			right: 0;
+}
+.notme blockquote cite {
+			left: 0;
+}
+body {
+	margin-bottom: 4rem;
+}
+#chatbox {
+	overflow-y: scroll;
+	display: block;
+	margin: 0 auto;
+  bottom: 14vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  }
+
+#talkbox {
+position: fixed;
+top: auto;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(75, 75, 75, 0.75);
+text-align: center;
+padding: 0.5rem;
+height: 14vh;
+box-sizing: border-box;
+border-top: 1px solid #cb44cd;
+}
+#talkbox input {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+font-size:1.3rem;
+border:0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
