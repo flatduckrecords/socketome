@@ -21,7 +21,9 @@ exampleSocket.onmessage = function (event) {
 	console.log(event.data, timeStr);
 }
 
-exampleSocket.onerror = function (event) { }
+exampleSocket.onerror = function (event) {
+	alert('error!');
+}
 
 window.onbeforeunload = function() {
 	exampleSocket.close();
