@@ -1,4 +1,5 @@
 const WebSocket = require('ws');
+const spellfucker = require('spellfucker');
 
 'use strict';
 
@@ -43,7 +44,6 @@ wss.on('connection', function connection(ws, req) {
 
   ws.id = ++connections;
   ws.ip = req.connection.remoteAddress;
-  
 
   console.log("Client " + ws.id + " [" + ws.ip + "] connected.");
 
@@ -53,14 +53,14 @@ wss.on('connection', function connection(ws, req) {
     id:   '',
     date: Date.now()
   };
-  
+
   ws.isAlive = true;
   ws.on('pong', heartbeat);
 
   ws.on('message', function incoming(message) {
     console.log('received: %s', message);
     msg.type = "chatter";
-    msg.text = message;
+    msg.text = spellfucker(message);
     msg.id = ws.id;
     msg.date = Date.now();
     wss.clients.forEach(function each(client) {
