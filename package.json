@@ -1,0 +1,19 @@
+{
+	"name": "socketome",
+	"description": "Web Socket Chat",
+	"version": "0.0.0",
+	"homepage": "http://robertmorrison.me/",
+	"repository": "flatduckrecords/socketome",
+	"author": "Robert Morrison <robert@flatduckrecords.co.uk>",
+	"keywords": [],
+	"files": [],
+	"man": "",
+	"dependencies": {
+		"spellfucker": "^0.1.5",
+		"ws": "^3.0.0"
+	},
+	"devDependencies": {},
+	"scripts": {},
+	"engines": {},
+	"license": "Bobby Licence"
+}
